@@ -34,9 +34,45 @@ class Person{
         var name = this.getFirstName() + " " + this.getLastName();
         console.log("Hi there, I'm " + name);
     }
-
 }
+// Create two instances with just one class
 let person1 = new Person("Dimmsdale", "Dimmadome");
 person1.greet();
 let person2 = new Person();
 person2.greet();
+                        // NOTE: methodName() is necessary ie, parenthesis necessary
+let personFName = person2.getFirstName();
+console.log(personFName);
+
+// Inheritence
+class Employee extends Person{
+    #idNumber;
+
+    constructor(firstName="John", lastName="Smith", idNumber="00001"){
+        super(firstName, lastName);
+        this.#idNumber = idNumber;
+    }
+
+    setIDNumber(idNumber){ this.#idNumber = idNumber; }
+    getIDNumber(){ return this.#idNumber; }
+
+    calculatePay(){ return 25000; }
+    greet(){
+        super.greet();
+        console.log("\nMy ID Number is: " + this.getIDNumber());
+    }
+}
+
+let employee3 = new Employee();
+console.log( employee3.greet() + "\n\tPay: " + employee3.calculatePay() );
+
+//      Prototypes
+
+// If you need to quickly change something about a class, we can access the "prototype"
+//      property inherent to all classes (since they descend from class Object)
+//      It's sort of a quick fix, a band-aid when we don't have access to the actual
+//      javascript classes
+Employee.prototype.stateDepartmentIn = function() {
+    console.log("Hi, I'm in the State department");
+}
+employee3.stateDepartmentIn();
