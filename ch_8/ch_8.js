@@ -101,3 +101,16 @@ console.log(arr_fruits);
 // Math.floor()
 // Math.log() <==> ln()
 // Math.exp() <==> e^()
+
+                        // Date methods
+let date1 = new Date();
+console.log(date1);
+
+let date2 = Date.now()  // Time in seconds since 1970
+console.log(date2);
+let date3 = new Date(1000)  // Date in milliseconds
+console.log(date3);
+let date4 = new Date("Thursday April 29, 2025");    // Date from a string
+console.log(date4);
+let date5 = new Date(2025, 4, 29, 19, 49, 30, 5);
+console.log(date5);
