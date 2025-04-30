@@ -84,3 +84,20 @@ console.log(arr_fruits);
 
 // .startsWith(element);
 //  .endsWith(element);
+
+                        // Number methods
+
+// isNan(thing)         --- checks if something is Not A Number , usually strings != "#"
+// isFinite(thing)      --- checks if something is finite; not finite things: strings, Infinity = , 10/0
+
+// x.toFixed(#)        --- to # of decimals
+// x.toPrecision       --- to # of significant figures
+
+                        // Math methods
+// Math.sqrt()
+// Math.pow()
+// Math.round()
+// Math.ceil()
+// Math.floor()
+// Math.log() <==> ln()
+// Math.exp() <==> e^()
