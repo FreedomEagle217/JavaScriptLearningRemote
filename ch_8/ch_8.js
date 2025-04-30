@@ -114,3 +114,13 @@ let date4 = new Date("Thursday April 29, 2025");    // Date from a string
 console.log(date4);
 let date5 = new Date(2025, 4, 29, 19, 49, 30, 5);
 console.log(date5);
+// Get and set methods for the date objects
+
+// Parsing dates
+date5 = Date.parse("06/07/2025");
+console.log(date5);
+date5 = Date.parse("Saturday January 27, 2025");
+console.log(date5);
+// Dates to Strings
+console.log(date5.toString());
+// NOT WORKING console.log(date5.toLocaleDateString());
